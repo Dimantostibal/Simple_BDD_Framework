@@ -17,8 +17,6 @@ import pages.AvitoResultPage;
 import ru.lanit.at.utils.Sleep;
 import ru.lanit.at.web.pagecontext.PageManager;
 
-import java.util.List;
-
 import static com.codeborne.selenide.Selenide.$;
 
 public class WebActionSteps {
@@ -109,9 +107,13 @@ public class WebActionSteps {
 //        LOGGER.info("в '{}' введено значение: {}", field, list.get(2));
 //    }
 
+    @И("подождать {int} секунд" )
+    public void expectation(int second){
+        Sleep.pauseSec(second);
+    }
+
     @И("нажата кнопка {string}")
-    public void clickOnRegionButton(String elementName) throws InterruptedException {
-        Thread.sleep(3000);
+    public void clickOnRegionButton(String elementName){
         SelenideElement element = pageManager
                 .getCurrentPage()
                 .getElement(elementName);
