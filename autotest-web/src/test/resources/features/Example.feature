@@ -1,4 +1,3 @@
-
 #language:ru
 @google
 Функционал: Поиск гугл

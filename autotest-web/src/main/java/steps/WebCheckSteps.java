@@ -2,15 +2,11 @@ package steps;
 
 import actions.WebChecks;
 import com.codeborne.selenide.SelenideElement;
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.lanit.at.web.pagecontext.PageManager;
-
-import java.util.List;
-import java.util.Map;
 
 public class WebCheckSteps {
 
@@ -32,16 +28,7 @@ public class WebCheckSteps {
         LOGGER.info("открылась страница '{}' по запросу '{}'", pageManager.getCurrentPage().name(), text);
     }
 
-//  Для DataTable feature file вместо метода выше
-
-//    @Тогда("открылась страница результаты по запросу:")
-//    public void searchTextOnPage(DataTable table) {
-//        List<List<String>> list = table.asLists();
-//        WebChecks.textVisibleOnPage(list.get(1).get(2), 2);
-//        LOGGER.info("открылась страница '{}' по запросу {}", pageManager.getCurrentPage().name(), list.get(1).get(2));
-//    }
-
-    //------------------------------------------ "^открылась страница результаты по запросу \"(.*\\b\\b.*)\"$"
+    //------------------------------------------
 
     /**
      * проверка присутствия текста на странице

@@ -25,14 +25,14 @@ public class AvitoResultPage extends WebPage {
     private SelenideElement productPrice = $x("//span[@class='price-text-E1Y7h text-text-LurtD text-size-s-BxGpL']");
 
     public SelenideElement getSearchName(int num) {
-        SelenideElement name = $x(String.format("(//*[@data-marker=\'catalog-serp\']" +
-                "/div/div/div/div/a/h3[@itemprop=\'name\'])[%d]", num));
+        SelenideElement name = $x(String.format("(//*[@data-marker='catalog-serp']" +
+                "/div/div/div/div/a/h3[@itemprop='name'])[%d]", num));
         return name;
     }
 
     public SelenideElement getProductPrice(int num) {
-        SelenideElement price = $x(String.format("(//*[@data-marker=\'catalog-serp\']" +
-                "/div/div/div/div/span/span/meta[@itemprop=\'price\'])[%d]", num));
+        SelenideElement price = $x(String.format("(//*[@data-marker='catalog-serp']" +
+                "/div/div/div/div/span/span/meta[@itemprop='price'])[%d]", num));
         return price;
     }
 }
